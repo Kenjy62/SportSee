@@ -1,39 +1,29 @@
 import { useState, useEffect } from "react";
 
 function API(url, type, value) {
+  const apiUrl = `http://localhost:5000` + url;
+  const apiMock = `http://localhost:3005` + url;
+
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function fetchData() {
+    console.log(url, type, value);
+
+    let isMounted = true;
+
+    const fetchData = async () => {
       setIsLoading(true);
 
-      try {
-        const response = await fetch(url);
-        const json = await response.json();
-
-        if (type === "Daily") {
-          setData(json.data.sessions);
-        } else if (type === "Card") {
-          if (value === "calories") {
-            setData(json.data.keyData.calorieCount);
-          } else if (value === "proteines") {
-            setData(json.data.keyData.proteinCount);
-          } else if (value === "glucides") {
-            setData(json.data.keyData.carbohydrateCount);
-          } else if (value === "lipides") {
-            setData(json.data.keyData.lipidCount);
-          }
-        }
-      } catch (error) {
-        setError(error);
-      } finally {
-        setIsLoading(false);
-      }
-    }
+      console.log("here");
+    };
 
     fetchData();
+
+    return () => {
+      isMounted = false;
+    };
   }, [url]);
 
   return { data, isLoading, error };

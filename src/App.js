@@ -6,16 +6,20 @@ import Container from "./components/container";
 import Welcome from "./components/welcome";
 import Grid from "./components/grid";
 
+import { UserProvider } from "./context/user";
+
 function App() {
   return (
     <>
       <Header />
       <Layout>
         <Nav />
-        <Container>
-          <Welcome name="Thomas" />
-          <Grid />
-        </Container>
+        <UserProvider>
+          <Container>
+            <Welcome />
+            <Grid />
+          </Container>
+        </UserProvider>
       </Layout>
     </>
   );

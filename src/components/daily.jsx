@@ -1,43 +1,34 @@
-import { PureComponent, useEffect, useState } from "react";
 import {
   BarChart,
   Bar,
-  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
-  LabelList,
   ResponsiveContainer,
 } from "recharts";
 
-import API from "../hooks/api";
-import Shimmer from "./shimmer";
+import { useContext } from "react";
+import { UserContext } from "../context/user";
 
 export default function Daily() {
-  const { data, isLoading, error } = API(
-    "http://localhost:3000/user/12/activity",
-    "Daily"
-  );
+  const { data, isLoading, error } = useContext(UserContext);
 
-  return (
-    <>
-      <div className="flex justify-between items-center my-6">
-        <span className="font-semibold">Activité Quotidienne</span>
-        <div className="flex flex-row gap-4 items-center mr-8">
-          <span className="h-3 w-3 rounded-full bg-black"></span>
-          <span>Poids (kg)</span>
-          <span className="h-3 w-3 rounded-full bg-red-500"></span>
-          <span>Calories brûlées</span>
+  if (!isLoading) {
+    return (
+      <>
+        <div className="flex justify-between items-center my-6">
+          <span className="font-semibold">Activité Quotidienne</span>
+          <div className="flex flex-row gap-4 items-center mr-8">
+            <span className="h-3 w-3 rounded-full bg-black"></span>
+            <span>Poids (kg)</span>
+            <span className="h-3 w-3 rounded-full bg-red-500"></span>
+            <span>Calories brûlées</span>
+          </div>
         </div>
-      </div>
-      <div className="w-full h-full my-14">
-        {(isLoading && !error) || error ? (
-          <Shimmer classe="w-full h-[360px] bg-gray-200 rounded-lg" />
-        ) : (
+        <div className="w-full h-full my-14">
           <ResponsiveContainer height={360}>
-            <BarChart data={data}>
+            <BarChart data={data.activity}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
               <XAxis dataKey="day" tickMargin={15} />
               <YAxis orientation="right" />
@@ -56,8 +47,8 @@ export default function Daily() {
               />
             </BarChart>
           </ResponsiveContainer>
-        )}
-      </div>
-    </>
-  );
+        </div>
+      </>
+    );
+  }
 }
