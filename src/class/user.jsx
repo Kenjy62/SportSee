@@ -7,7 +7,13 @@ export default class User {
       user.userInfos.firstName,
       user.userInfos.lastName
     );
-    this.todayScore = parseFloat(user.todayScore);
+    this.todayScore = [
+      {
+        name: "todayScore",
+        score: parseFloat(user.todayScore * 100),
+        fill: "red",
+      },
+    ];
     this.age = parseInt(user.userInfos.age);
     this.activity = this.getActivity(user.activity[0].sessions);
     this.averageSession = this.getAverageSession(

@@ -12,7 +12,9 @@ export default function Nav() {
         <img src={Icon3} />
         <img src={Icon4} />
       </div>
-      <div className="copyright text-white">Copyright SportSee 2020</div>
+      <div className="copyright text-white rotate-180">
+        Copyright SportSee 2020
+      </div>
     </div>
   );
 }

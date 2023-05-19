@@ -1,9 +1,12 @@
 import Daily from "./daily";
 import Card from "./card";
+import Sessions from "./sessions";
+import Performances from "./performances";
 
 import { useContext } from "react";
 
 import { UserContext } from "../context/user";
+import Score from "./score";
 
 export default function Grid() {
   const { isLoading, data, error } = useContext(UserContext);
@@ -17,9 +20,15 @@ export default function Grid() {
               <Daily />
             </div>
             <div className="grid grid-cols-3 gap-8">
-              <div>1</div>
-              <div>2</div>
-              <div>3</div>
+              <div className="h-fit">
+                <Sessions />
+              </div>
+              <div className="h-fit">
+                <Performances />
+              </div>
+              <div>
+                <Score />
+              </div>
             </div>
           </div>
           <div className="col-span-1">
