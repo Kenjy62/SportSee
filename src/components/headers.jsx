@@ -1,6 +1,11 @@
+import { useContext } from "react";
+
 import Logo from "../assets/logo.png";
+import { MenuContext } from "../context/menu";
 
 export default function Header() {
+  const { toggleOpen } = useContext(MenuContext);
+
   const HEADER = {
     sm: "flex flex-col h-24 gap-3 bg-black w-full items-center justify-center px-4",
     lg: "lg:h-24 lg:bg-black lg:w-full lg:flex lg:flex-row lg:items-center lg:justify-start",
@@ -18,6 +23,13 @@ export default function Header() {
 
   return (
     <header className={`${HEADER.sm} ${HEADER.lg}`}>
+      <div
+        onClick={toggleOpen}
+        className="navButton absolute top-5 left-5 text-white lg:hidden"
+      >
+        <i className="text-2xl text-white fa-solid fa-bars cursor-pointer"></i>
+      </div>
+
       <div>
         <img
           className={`${LOGO.sm} ${LOGO.lg}`}

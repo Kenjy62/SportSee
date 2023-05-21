@@ -7,20 +7,23 @@ import Welcome from "./components/welcome";
 import Grid from "./components/grid";
 
 import { UserProvider } from "./context/user";
+import { MenuProvider } from "./context/menu";
 
 function App() {
   return (
     <>
-      <Header />
-      <Layout>
-        <Nav />
-        <UserProvider>
-          <Container>
-            <Welcome />
-            <Grid />
-          </Container>
-        </UserProvider>
-      </Layout>
+      <MenuProvider>
+        <Header />
+        <Layout>
+          <Nav />
+          <UserProvider>
+            <Container>
+              <Welcome />
+              <Grid />
+            </Container>
+          </UserProvider>
+        </Layout>
+      </MenuProvider>
     </>
   );
 }

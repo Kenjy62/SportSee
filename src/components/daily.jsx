@@ -21,19 +21,23 @@ import { DailyRightTick, DailyTick, DailyTooltip } from "./recharts/custom";
 export default function Daily() {
   const { data, isLoading, error } = useContext(UserContext);
 
-  if (!isLoading) {
-    return (
-      <>
-        <div className="flex justify-between items-center my-6">
-          <span className="font-semibold">Activité Quotidienne</span>
-          <div className="flex flex-row gap-4 items-center mr-8">
-            <span className="h-3 w-3 rounded-full bg-black"></span>
-            <span>Poids (kg)</span>
-            <span className="h-3 w-3 rounded-full bg-red-500"></span>
-            <span>Calories brûlées</span>
-          </div>
+  return (
+    <>
+      <div className="flex justify-between items-center my-6 w-full">
+        <span className="font-semibold">Activité Quotidienne</span>
+        <div className="flex flex-row gap-4 items-center mr-8">
+          <span className="h-3 w-3 rounded-full bg-black"></span>
+          <span>Poids (kg)</span>
+          <span className="h-3 w-3 rounded-full bg-red-500"></span>
+          <span>Calories brûlées</span>
         </div>
-        <div className="w-full h-full my-14">
+      </div>
+      <div className="w-full h-full my-14 relative">
+        {isLoading ? (
+          <div className="w-full h-[360px] bg-gray-300">
+            <div className="shimmer"></div>
+          </div>
+        ) : (
           <ResponsiveContainer height={360}>
             <BarChart data={data.activity}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
@@ -64,8 +68,8 @@ export default function Daily() {
               />
             </BarChart>
           </ResponsiveContainer>
-        </div>
-      </>
-    );
-  }
+        )}
+      </div>
+    </>
+  );
 }
