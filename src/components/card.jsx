@@ -17,12 +17,12 @@ export default function Card({ type, children }) {
   }
 
   const style =
-    `h-24 w-24 flex justify-center items-center rounded-md ` +
+    `h-12 w-12 flex justify-center items-center rounded-md ` +
     customStyle.color;
 
   if (!isLoading) {
     return (
-      <div className="bg-[#FBFBFB] p-8 rounded-md flex flex-row gap-8 justify-center items-center">
+      <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center">
         <div className={style}>
           <img
             src={require(`../assets/icons/${customStyle.icon}.png`)}

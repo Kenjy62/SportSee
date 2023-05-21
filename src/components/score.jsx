@@ -20,7 +20,7 @@ export default function Score() {
   ];
 
   return (
-    <div className="bg-[white] rounded-lg relative w-full h-80 flex flex-col">
+    <div className="bg-[white] rounded-lg relative w-full h-40 md:h-52 xl:h-80 flex flex-col">
       <div className="ml-10 font-semibold text-xl">Score</div>
       <ResponsiveContainer>
         <RadialBarChart

@@ -18,12 +18,11 @@ export default function Performances() {
   const { data, isLoading, error } = useContext(UserContext);
 
   return (
-    <div className="bg-[#282D30] rounded-lg w-full h-80 flex justify-center items-center">
-      <ResponsiveContainer height={280}>
+    <div className="bg-[#282D30] rounded-lg w-full h-40 p-2 md:h-52 xl:h-80 flex justify-center items-center">
+      <ResponsiveContainer>
         <RadarChart
-          height={280}
           data={data.performance}
-          margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
+          margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
         >
           <PolarGrid radialLines={false} />
           <PolarAngleAxis

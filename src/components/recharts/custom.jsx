@@ -51,10 +51,10 @@ export const DailyRightTick = ({ x, y, payload, type }) => {
 export const ScoreLegend = ({ payload }) => {
   return (
     <div className="flex items-center justify-center flex-col">
-      <span className="block font-semibold text-2xl">
+      <span className="block font-semibold text-md">
         {payload[0].payload.value}%
       </span>
-      <span className="block font-semibold text-[#74798C] text-xl">
+      <span className="block font-semibold text-[#74798C] text-[9px] xl:text-xl">
         de votre objectif
       </span>
     </div>
@@ -96,7 +96,11 @@ export const SessionLegend = (props) => {
   return (
     <ul>
       {payload.map((entry, index) => (
-        <li key={`item-${index}`} style={{ color: entry.color }}>
+        <li
+          key={`item-${index}`}
+          style={{ color: entry.color }}
+          className="xl:text-xl"
+        >
           {entry.value === "sessionLength"
             ? "Durée moyenne des sessions"
             : entry.value}

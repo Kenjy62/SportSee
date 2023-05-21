@@ -19,8 +19,8 @@ export default function Sessions() {
   const { data, isLoading, error } = useContext(UserContext);
 
   return (
-    <div className="bg-red-500 rounded-lg w-full h-80">
-      <ResponsiveContainer height={300}>
+    <div className="bg-red-500 rounded-lg w-full p-2 h-40 md:h-52 xl:h-80">
+      <ResponsiveContainer>
         <LineChart data={data.averageSession}>
           <CartesianGrid
             strokeDasharray="3 3"
@@ -41,7 +41,6 @@ export default function Sessions() {
             align="left"
             stroke="white"
             iconSize={0}
-            wrapperStyle={{ fontSize: "20px", color: "white" }}
             content={SessionLegend}
           />
           <Line
