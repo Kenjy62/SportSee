@@ -2,25 +2,21 @@ import {
   LineChart,
   CartesianGrid,
   XAxis,
-  YAxis,
   Tooltip,
   Legend,
   Line,
   ResponsiveContainer,
 } from "recharts";
-
 import { useContext } from "react";
 
-import { UserContext } from "../context/user";
+// Custom Recharts Components
+import { SessionLegend, SessionTick, SessionTooltip } from "./recharts/custom";
 
-import renderLegend from "./recharts/legend";
-import CustomTick from "./recharts/customTick";
-import CustomTooltip from "./recharts/customTooltip";
+// Context
+import { UserContext } from "../context/user";
 
 export default function Sessions() {
   const { data, isLoading, error } = useContext(UserContext);
-
-  console.log(data);
 
   return (
     <div className="bg-red-500 rounded-lg w-full h-80">
@@ -36,17 +32,17 @@ export default function Sessions() {
             stroke="white"
             axisLine={false}
             tickLine={false}
-            tick={CustomTick}
+            tick={SessionTick}
             dy={15}
           />
-          <Tooltip content={CustomTooltip} />
+          <Tooltip content={SessionTooltip} />
           <Legend
             verticalAlign="top"
             align="left"
             stroke="white"
             iconSize={0}
             wrapperStyle={{ fontSize: "20px", color: "white" }}
-            content={renderLegend}
+            content={SessionLegend}
           />
           <Line
             type="monotone"

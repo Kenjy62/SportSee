@@ -1,16 +1,18 @@
+// Required
 import {
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
   Radar,
-  Legend,
   RadarChart,
   ResponsiveContainer,
 } from "recharts";
-
 import { useContext } from "react";
+
+// Context
 import { UserContext } from "../context/user";
-import RadarTick from "./recharts/radarTick";
+
+// Custom Recharts Components
+import { RadarTick } from "./recharts/custom";
 
 export default function Performances() {
   const { data, isLoading, error } = useContext(UserContext);

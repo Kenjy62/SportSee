@@ -7,13 +7,13 @@ export default function Card({ type, children }) {
   var customStyle = null;
 
   if (type === "calorieCount") {
-    customStyle = { name: "Calorie", color: "bg-red-100", icon: "calorie" };
+    customStyle = { name: "Calories", color: "bg-red-100", icon: "calorie" };
   } else if (type === "proteinCount") {
-    customStyle = { name: "Proteine", color: "bg-blue-100", icon: "proteine" };
+    customStyle = { name: "Proteines", color: "bg-blue-100", icon: "proteine" };
   } else if (type === "lipidCount") {
-    customStyle = { name: "Lipide", color: "bg-pink-100", icon: "lipide" };
+    customStyle = { name: "Lipides", color: "bg-pink-100", icon: "lipide" };
   } else if (type === "carbohydrateCount") {
-    customStyle = { name: "Glucide", color: "bg-yellow-100", icon: "glucide" };
+    customStyle = { name: "Glucides", color: "bg-yellow-100", icon: "glucide" };
   }
 
   const style =

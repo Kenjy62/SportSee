@@ -1,11 +1,14 @@
+// Required
+import { useContext } from "react";
+
+// Context
+import { UserContext } from "../context/user";
+
+// Components
 import Daily from "./daily";
 import Card from "./card";
 import Sessions from "./sessions";
 import Performances from "./performances";
-
-import { useContext } from "react";
-
-import { UserContext } from "../context/user";
 import Score from "./score";
 
 export default function Grid() {

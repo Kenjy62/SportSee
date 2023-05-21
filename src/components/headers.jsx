@@ -1,12 +1,31 @@
 import Logo from "../assets/logo.png";
 
 export default function Header() {
+  const HEADER = {
+    sm: "flex flex-col h-24 gap-3 bg-black w-full items-center justify-center",
+    lg: "lg:h-24 lg:bg-black lg:w-full lg:flex lg:flex-row lg:items-center lg:justify-start",
+  };
+
+  const LOGO = {
+    sm: "h-12",
+    lg: "h-20",
+  };
+
+  const MENU = {
+    sm: "gap-4 flex flex-row justify-between",
+    lg: "lg:flex lg:flex-1 lg:justify-around",
+  };
+
   return (
-    <header className="h-24 bg-black w-full flex items-center">
+    <header className={`${HEADER.sm} ${HEADER.lg}`}>
       <div>
-        <img className="h-20" src={Logo} alt="Sportsee Logo" />
+        <img
+          className={`${LOGO.sm} ${LOGO.lg}`}
+          src={Logo}
+          alt="Sportsee Logo"
+        />
       </div>
-      <nav className="flex flex-1 justify-around">
+      <nav className={`${MENU.sm} ${MENU.lg}`}>
         <a className="text-white text-xl" href="#">
           Accueil
         </a>

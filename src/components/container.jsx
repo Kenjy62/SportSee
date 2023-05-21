@@ -17,7 +17,7 @@ export default function Container({ children }) {
 
   if (!isLoading) {
     return (
-      <div className="w-full h-full p-20 overflow-hidden overflow-y-scroll">
+      <div className="w-full h-full p-4 overflow-hidden overflow-y-scroll lg:p-20">
         {children}
       </div>
     );

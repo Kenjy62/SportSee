@@ -1,3 +1,5 @@
+// Required
+
 import {
   BarChart,
   Bar,
@@ -7,9 +9,14 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-
 import { useContext } from "react";
+
+// Context
 import { UserContext } from "../context/user";
+
+// Components
+
+import { DailyRightTick, DailyTick, DailyTooltip } from "./recharts/custom";
 
 export default function Daily() {
   const { data, isLoading, error } = useContext(UserContext);
@@ -30,9 +37,19 @@ export default function Daily() {
           <ResponsiveContainer height={360}>
             <BarChart data={data.activity}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis dataKey="day" tickMargin={15} />
-              <YAxis orientation="right" />
-              <Tooltip />
+              <XAxis
+                dataKey="day"
+                tickMargin={15}
+                tick={DailyTick}
+                tickLine={false}
+              />
+              <YAxis
+                orientation="right"
+                axisLine={false}
+                tickLine={false}
+                tick={DailyRightTick}
+              />
+              <Tooltip content={<DailyTooltip />} />
               <Bar
                 barSize={10}
                 dataKey="kilogram"

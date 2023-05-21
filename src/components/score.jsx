@@ -9,7 +9,7 @@ import {
 import { useContext } from "react";
 import { UserContext } from "../context/user";
 
-import { CustomLegendScore } from "./recharts/customLegendScore";
+import { ScoreLegend } from "./recharts/custom";
 
 export default function Score() {
   const { data, isLoading, error } = useContext(UserContext);
@@ -35,7 +35,7 @@ export default function Score() {
         >
           <RadialBar background dataKey="score" fill="#E60000" />
           <Legend
-            content={<CustomLegendScore />}
+            content={<ScoreLegend />}
             verticalAlign="middle"
             layout="vertical"
           />
