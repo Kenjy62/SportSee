@@ -1,14 +1,16 @@
+// Required
 import {
   ResponsiveContainer,
   RadialBarChart,
   RadialBar,
   Legend,
-  Tooltip,
 } from "recharts";
-
 import { useContext } from "react";
+
+// Context
 import { UserContext } from "../context/user";
 
+// Components
 import { ScoreLegend } from "./recharts/custom";
 
 export default function Score() {

@@ -14,16 +14,15 @@ import Score from "./score";
 export default function Grid() {
   const { isLoading, data, error } = useContext(UserContext);
 
-  const style2 = `h-12 w-12 flex justify-center items-center rounded-md bg-red-500`;
   return (
     <>
       <div
-        className={`grid grid-rows-1 lg:grid lg:grid-cols-6 xl:grid xl:grid-cols-8 w-full`}
+        className={`grid grid-rows-1 lg:grid lg:grid-cols-6 xl:grid xl:grid-cols-8 w-full my-6 gap-8`}
       >
         <div
           className={`col-span-1 grid grid-rows-1 lg:col-span-5 lg:grid lg:grid-rows-2 lg:gap-8 xl:col-span-6 xl:grid xl:grid-rows-2 xl:gap-8 w-full`}
         >
-          <div className="flex flex-col justify-between items-stretch my-6 w-full">
+          <div className="flex flex-col justify-between items-stretch w-full bg-[#FBFBFB] pl-4 rounded-md shadow-sm">
             <Daily />
           </div>
           <div
@@ -53,28 +52,28 @@ export default function Grid() {
             ) : (
               <>
                 <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center">
-                  <div className={style2}></div>
+                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-red-500"></div>
                   <div className="flex flex-col">
                     <span className="font-bold text-xl"></span>
                     <span className="text-md text-gray-400"></span>
                   </div>
                 </div>
                 <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center">
-                  <div className={style2}></div>
+                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-red-500"></div>
                   <div className="flex flex-col">
                     <span className="font-bold text-xl"></span>
                     <span className="text-md text-gray-400"></span>
                   </div>
                 </div>
                 <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center">
-                  <div className={style2}></div>
+                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-red-500"></div>
                   <div className="flex flex-col">
                     <span className="font-bold text-xl"></span>
                     <span className="text-md text-gray-400"></span>
                   </div>
                 </div>
                 <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center">
-                  <div className={style2}></div>
+                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-red-500"></div>
                   <div className="flex flex-col">
                     <span className="font-bold text-xl"></span>
                     <span className="text-md text-gray-400"></span>

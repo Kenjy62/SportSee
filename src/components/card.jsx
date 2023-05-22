@@ -22,7 +22,7 @@ export default function Card({ type, children }) {
 
   if (!isLoading) {
     return (
-      <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center">
+      <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center shadow-sm">
         <div className={style}>
           <img
             src={require(`../assets/icons/${customStyle.icon}.png`)}

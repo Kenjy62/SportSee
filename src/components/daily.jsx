@@ -1,5 +1,4 @@
 // Required
-
 import {
   BarChart,
   Bar,
@@ -15,7 +14,6 @@ import { useContext } from "react";
 import { UserContext } from "../context/user";
 
 // Components
-
 import { DailyRightTick, DailyTick, DailyTooltip } from "./recharts/custom";
 
 export default function Daily() {

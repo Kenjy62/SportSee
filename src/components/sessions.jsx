@@ -9,7 +9,7 @@ import {
 } from "recharts";
 import { useContext } from "react";
 
-// Custom Recharts Components
+// Components
 import { SessionLegend, SessionTick, SessionTooltip } from "./recharts/custom";
 
 // Context

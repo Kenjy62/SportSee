@@ -1,9 +1,11 @@
+// required
 import { useContext, useEffect } from "react";
 
+// Context
 import { UserContext } from "../context/user";
 
 export default function Container({ children }) {
-  const { LoadUser, isLoading } = useContext(UserContext);
+  const { LoadUser } = useContext(UserContext);
 
   useEffect(() => {
     let isLoaded = true;
