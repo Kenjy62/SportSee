@@ -21,15 +21,17 @@ export default function Score() {
   if (!isLoading) {
     dataUpdate = [
       ...data.todayScore,
-      { name: "Score", score: 100, fill: "white" },
+      { name: "Score", score: 100, fill: "#FBFBFB" },
     ];
   }
 
   return (
-    <div className="bg-[white] rounded-lg relative w-full h-40 md:h-52 xl:h-80 flex flex-col">
-      <div className="ml-10 font-semibold text-xl">Score</div>
+    <div className="rounded-md relative w-full h-40 md:h-52 xl:h-80 flex flex-col bg-[#FBFBFB]">
+      <div className="ml-10 font-semibold text-xl absolute top-2 left-2">
+        Score
+      </div>
       {isLoading ? (
-        <div className="w-full h-[360px] bg-gray-300">
+        <div className="w-full h-[360px] bg-[#FBFBFB] rounded-md">
           <div className="shimmer"></div>
         </div>
       ) : (
@@ -44,7 +46,7 @@ export default function Score() {
             endAngle={-180}
             data={dataUpdate}
           >
-            <RadialBar background dataKey="score" fill="#E60000" />
+            <RadialBar background dataKey="score" fill="#fff" />
             <Legend
               content={<ScoreLegend />}
               verticalAlign="middle"

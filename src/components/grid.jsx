@@ -52,28 +52,28 @@ export default function Grid() {
             ) : (
               <>
                 <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center">
-                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-red-500"></div>
+                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-red-100"></div>
                   <div className="flex flex-col">
                     <span className="font-bold text-xl"></span>
                     <span className="text-md text-gray-400"></span>
                   </div>
                 </div>
                 <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center">
-                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-red-500"></div>
+                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-blue-100"></div>
                   <div className="flex flex-col">
                     <span className="font-bold text-xl"></span>
                     <span className="text-md text-gray-400"></span>
                   </div>
                 </div>
                 <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center">
-                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-red-500"></div>
+                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-pink-100"></div>
                   <div className="flex flex-col">
                     <span className="font-bold text-xl"></span>
                     <span className="text-md text-gray-400"></span>
                   </div>
                 </div>
                 <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center">
-                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-red-500"></div>
+                  <div className="h-12 w-12 flex justify-center items-center rounded-md bg-yellow-100"></div>
                   <div className="flex flex-col">
                     <span className="font-bold text-xl"></span>
                     <span className="text-md text-gray-400"></span>
