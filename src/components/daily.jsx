@@ -16,6 +16,11 @@ import { UserContext } from "../context/user";
 // Components
 import { DailyRightTick, DailyTick, DailyTooltip } from "./recharts/custom";
 
+/**
+ * Composant du Daily Charts.
+ * @returns {JSX.Element} Le composant du Daily Charts.
+ */
+
 export default function Daily() {
   const { data, isLoading, error } = useContext(UserContext);
 

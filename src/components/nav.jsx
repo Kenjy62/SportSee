@@ -10,6 +10,11 @@ import Icon4 from "../assets/menu/icon4.png";
 // Context
 import { MenuContext } from "../context/menu";
 
+/**
+ * Composant de la bar de navigation.
+ * @returns {JSX.Element} Le composant de la barre de navigation.
+ */
+
 export default function Nav() {
   const { open } = useContext(MenuContext);
   const [screen, setScreen] = useState({ width: 0, height: 0 });

@@ -13,6 +13,11 @@ import { UserContext } from "../context/user";
 // Components
 import { ScoreLegend } from "./recharts/custom";
 
+/**
+ * Composant du Score Charts.
+ * @returns {JSX.Element} Le composant du Score Charts.
+ */
+
 export default function Score() {
   const { data, isLoading, error } = useContext(UserContext);
 

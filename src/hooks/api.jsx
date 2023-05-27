@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 
-function API(url, type, value) {
+/**
+ * Hook pour gérer les calls API
+ * @param {String} url endpoint de l'api
+ * @return {object} Retourne les données, l'état de chargement, les erreurs.
+ */
+
+function API(url) {
   const apiUrl = `http://localhost:5000` + url;
   const apiMock = `http://localhost:3005` + url;
 
@@ -9,8 +15,6 @@ function API(url, type, value) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log(url, type, value);
-
     let isMounted = true;
 
     const fetchData = async () => {

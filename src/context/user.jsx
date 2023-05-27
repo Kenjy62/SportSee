@@ -4,6 +4,13 @@ import { createContext, useState } from "react";
 
 export const UserContext = createContext();
 
+/**
+ * Fournisseur de contexte pour l'user.
+ * @param {object} props - Les propriétés du composant.
+ * @param {ReactNode} props.children - Les composants enfants.
+ * @returns {JSX.Element} Le composant Fournisseur de contexte.
+ */
+
 export const UserProvider = ({ children }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);

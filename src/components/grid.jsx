@@ -11,6 +11,11 @@ import Sessions from "./sessions";
 import Performances from "./performances";
 import Score from "./score";
 
+/**
+ * Composant de la grid d'affichage.
+ * @returns {JSX.Element} Le composant de la grid d'affichage.
+ */
+
 export default function Grid() {
   const { isLoading, data, error } = useContext(UserContext);
 

@@ -4,6 +4,11 @@ import { useContext, useEffect } from "react";
 // Context
 import { UserContext } from "../context/user";
 
+/**
+ * Composant du Container.
+ * @returns {JSX.Element} Le composant du Container.
+ */
+
 export default function Container({ children }) {
   const { LoadUser } = useContext(UserContext);
 

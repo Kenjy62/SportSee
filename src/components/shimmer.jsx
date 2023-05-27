@@ -1,3 +1,9 @@
+/**
+ * Fournisseur de contexte pour le menu.
+ * @param {String} classe - Le style du Shimmer.
+ * @returns {JSX.Element} Le composant Fournisseur de contexte.
+ */
+
 export default function Shimmer({ classe }) {
   const style = `
   background: red

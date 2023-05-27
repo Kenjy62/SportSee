@@ -7,6 +7,11 @@ import Logo from "../assets/logo.png";
 // Context
 import { MenuContext } from "../context/menu";
 
+/**
+ * Composant du header.
+ * @returns {JSX.Element} Le composant du header.
+ */
+
 export default function Header() {
   const { toggleOpen } = useContext(MenuContext);
 

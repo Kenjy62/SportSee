@@ -4,6 +4,11 @@ import { useContext } from "react";
 // Context
 import { UserContext } from "../context/user";
 
+/**
+ * Composant du message de bienvenue.
+ * @returns {JSX.Element} Le composant du message de bienvenue.
+ */
+
 export default function Welcome() {
   const { data, isLoading, error } = useContext(UserContext);
 

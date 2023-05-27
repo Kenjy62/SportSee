@@ -14,6 +14,11 @@ import { UserContext } from "../context/user";
 // Custom Recharts Components
 import { RadarTick } from "./recharts/custom";
 
+/**
+ * Composant du Performance Charts.
+ * @returns {JSX.Element} Le composant du Performance Charts.
+ */
+
 export default function Performances() {
   const { data, isLoading, error } = useContext(UserContext);
 

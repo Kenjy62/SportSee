@@ -1,5 +1,12 @@
 import { Text } from "recharts";
 
+/**
+ * Modificateur de style pour les tooltips
+ * @param {Boolean} active - Etat de la tooltip.
+ * @param {object} payload - Informations de la tooltip
+ * @returns {JSX.Element} Le composant Tooltip modifié.
+ */
+
 // Daily
 export const DailyTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -14,7 +21,15 @@ export const DailyTooltip = ({ active, payload }) => {
   return null;
 };
 
-export const DailyTick = ({ x, y, payload, type }) => {
+/**
+ * Modificateur de style pour les ticks
+ * @param {Number} x - Coordonnée X du tick
+ * @param {Number} y - Coordonnée Y du tick
+ * @param {object} payload - Information du tick
+ * @returns {JSX.Element} Le composant Tick modifié.
+ */
+
+export const DailyTick = ({ x, y, payload }) => {
   let p = payload.value.split("-");
 
   return (
@@ -31,7 +46,15 @@ export const DailyTick = ({ x, y, payload, type }) => {
   );
 };
 
-export const DailyRightTick = ({ x, y, payload, type }) => {
+/**
+ * Modificateur de style pour les ticks.
+ * @param {Number} x - Coordonnée X du tick
+ * @param {Number} y - Coordonnée Y du tick
+ * @param {object} payload - Information du tick
+ * @returns {JSX.Element} Le composant Tick modifié.
+ */
+
+export const DailyRightTick = ({ x, y, payload }) => {
   return (
     <text
       fill="#9B9EAC"
@@ -48,13 +71,19 @@ export const DailyRightTick = ({ x, y, payload, type }) => {
 
 // Score
 
+/**
+ * Modificateur de style pour la légende.
+ * @param {object} payload - Information de la legend
+ * @returns {JSX.Element} Le composant Legend modifié.
+ */
+
 export const ScoreLegend = ({ payload }) => {
   return (
-    <div className="flex items-center justify-center flex-col">
-      <span className="block font-semibold text-md">
+    <div className="flex flex-col items-center justify-center">
+      <span className="text-md block font-semibold">
         {payload[0].payload.value}%
       </span>
-      <span className="block font-semibold text-[#74798C] text-[9px] xl:text-xl">
+      <span className="block text-[9px] font-semibold text-[#74798C] xl:text-xl">
         de votre objectif
       </span>
     </div>
@@ -62,6 +91,16 @@ export const ScoreLegend = ({ payload }) => {
 };
 
 // Radar
+
+/**
+ * Modificateur de styl pour les ticks
+ * @param {Number} x - Coordonnée X du tick
+ * @param {Number} y - Coordonnée Y du tick
+ * @param {Number} cx - Margin X du X
+ * @param {Number} cy - Margin Y du X
+ * @param {object} payload - Information du tick
+ * @returns {JSX.Element} Le composant Tick modifié.
+ */
 
 export const RadarTick = ({ payload, x, y, cx, cy, ...rest }) => {
   let word = payload.value.charAt(0).toUpperCase() + payload.value.slice(1);
@@ -90,6 +129,12 @@ export const RadarTick = ({ payload, x, y, cx, cy, ...rest }) => {
 
 // Session
 
+/**
+ * Modificateur de style pour la légende.
+ * @param {object} props - Props du composant Legend
+ * @returns {JSX.Element} Le composant Legend modifié.
+ */
+
 export const SessionLegend = (props) => {
   const { payload } = props;
 
@@ -110,7 +155,15 @@ export const SessionLegend = (props) => {
   );
 };
 
-export const SessionTick = ({ x, y, payload, type }) => {
+/**
+ * Modificateur de style pour le Tick.
+ * @param {object} payload - Information du Tick
+ * @param {Number} x - X du Tick
+ * @param {Number} y - Y du Tick
+ * @returns {JSX.Element} Le composant Tick modifié.
+ */
+
+export const SessionTick = ({ x, y, payload }) => {
   const day = ["L", "M", "M", "J", "V", "S", "D"];
 
   return (
@@ -120,8 +173,14 @@ export const SessionTick = ({ x, y, payload, type }) => {
   );
 };
 
-export const SessionTooltip = ({ active, payload, label }) => {
+/**
+ * Modificateur de style pour la légende.
+ * @param {boolean} active - Information du visibilité de la tooltip
+ * @param {object} payload - Information de la legend
+ * @returns {JSX.Element} Le composant Tooltip modifié.
+ */
+export const SessionTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
-    return <div className="p-2 bg-white">{payload[0].value + "min"}</div>;
+    return <div className="bg-white p-2">{payload[0].value + "min"}</div>;
   }
 };

@@ -15,6 +15,11 @@ import { SessionLegend, SessionTick, SessionTooltip } from "./recharts/custom";
 // Context
 import { UserContext } from "../context/user";
 
+/**
+ * Composant du Session Charts.
+ * @returns {JSX.Element} Le composant du Session Charts.
+ */
+
 export default function Sessions() {
   const { data, isLoading, error } = useContext(UserContext);
 
