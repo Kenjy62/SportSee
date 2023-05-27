@@ -14,6 +14,11 @@ export const UserProvider = ({ children }) => {
     mock: "http://localhost:3005/user/",
   };
 
+  /**
+   * Permet de récupérer les informations d'un utilisateur à partir de son id et de les sauvergarder dans le state data
+   * @param {number} id
+   */
+
   const LoadUser = async (id) => {
     try {
       const mainInfos = await fetch(burl.api + id);

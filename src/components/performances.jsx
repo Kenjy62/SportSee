@@ -18,9 +18,9 @@ export default function Performances() {
   const { data, isLoading, error } = useContext(UserContext);
 
   return (
-    <div className="bg-[#282D30] rounded-lg w-full h-40 p-2 md:h-52 xl:h-80 flex justify-center items-center relative">
+    <div className="relative flex h-40 w-full items-center justify-center rounded-lg bg-[#282D30] p-2 md:h-52 xl:h-80">
       {isLoading ? (
-        <div className="w-full h-full">
+        <div className="h-full w-full">
           <div className="shimmer"></div>
         </div>
       ) : (

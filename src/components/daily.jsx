@@ -21,18 +21,18 @@ export default function Daily() {
 
   return (
     <>
-      <div className="flex justify-between items-center my-6 w-full">
+      <div className="my-6 flex w-full items-center justify-between">
         <span className="font-semibold">Activité Quotidienne</span>
-        <div className="flex flex-row gap-4 items-center mr-8">
+        <div className="mr-8 flex flex-row items-center gap-4">
           <span className="h-3 w-3 rounded-full bg-black"></span>
           <span>Poids (kg)</span>
           <span className="h-3 w-3 rounded-full bg-red-500"></span>
           <span>Calories brûlées</span>
         </div>
       </div>
-      <div className="w-full h-full my-14 relative">
+      <div className="relative my-14 h-full w-full">
         {isLoading ? (
-          <div className="w-full h-[360px] bg-gray-300">
+          <div className="h-[360px] w-full bg-gray-300">
             <div className="shimmer"></div>
           </div>
         ) : (

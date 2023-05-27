@@ -12,13 +12,13 @@ export default function Welcome() {
   }
 
   return (
-    <div className="flex gap-5 flex-col relative">
+    <div className="relative flex flex-col gap-5">
       {isLoading ? (
-        <h1 className="text-3xl font-bold relative opacity-0">
+        <h1 className="relative text-3xl font-bold opacity-0">
           Bonjour <font color="red">loading...</font>
         </h1>
       ) : (
-        <h1 className="text-3xl font-bold relative">
+        <h1 className="relative text-3xl font-bold">
           Bonjour <font color="red">{data.fullname}</font>
         </h1>
       )}

@@ -18,7 +18,7 @@ export default function Container({ children }) {
   }, []);
 
   return (
-    <div className="w-full h-full p-4 overflow-hidden overflow-y-scroll lg:p-6">
+    <div className="h-full w-full overflow-hidden overflow-y-scroll p-4 lg:p-6">
       {children}
     </div>
   );

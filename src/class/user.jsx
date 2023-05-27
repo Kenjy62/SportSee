@@ -1,5 +1,11 @@
 export default class User {
+  /**
+   * Crée une instance de la classe User.
+   * @param {Object} user - Les données de l'utilisateur.
+   */
   constructor(user) {
+    console.log(user);
+
     this.id = user.id;
     this.firstName = user.userInfos.firstName;
     this.lastName = user.userInfos.lastName;
@@ -23,6 +29,12 @@ export default class User {
     this.performance = this.getPerformance(user.performance[0]);
   }
 
+  /**
+   * Permet de créer un nouvel objet contenant le nom complet de l'utilisateur.
+   * @param {string} firstname - Le prénom de l'utilisateur.
+   * @param {string} lastname - Le nom de famille de l'utilisateur.
+   * @returns {string} Le nom complet de l'utilisateur (firstname + lastname).
+   */
   getFullName(firstname, lastname) {
     if (typeof firstname !== "string") {
       firstname = firstname.toString();
@@ -35,6 +47,11 @@ export default class User {
     return `${firstname} ${lastname}`;
   }
 
+  /**
+   * Permet de formater les données d'activité de l'utilisateur.
+   * @param {Array} activity - Les données d'activité de l'utilisateur.
+   * @returns {Array} Les données d'activité formatées.
+   */
   getActivity(activity) {
     let d = [];
 
@@ -50,6 +67,11 @@ export default class User {
     return d;
   }
 
+  /**
+   * Permet de formater les données de session moyenne de l'utilisateur.
+   * @param {Array} session - Les données de session moyenne de l'utilisateur.
+   * @returns {Array} Les données de session moyenne formatées.
+   */
   getAverageSession(session) {
     let d = [];
 
@@ -64,6 +86,11 @@ export default class User {
     return d;
   }
 
+  /**
+   * Permet de formater les données clés de l'utilisateur.
+   * @param {Object} keydata - Les données clés de l'utilisateur.
+   * @returns {Array} Les données clés formatées.
+   */
   getKeyData(keydata) {
     let d = [];
     Object.entries(keydata).map((key, value) => {
@@ -73,6 +100,11 @@ export default class User {
     return d;
   }
 
+  /**
+   * Permet de formater les données de performance de l'utilisateur.
+   * @param {Object} performance - Les données de performance de l'utilisateur.
+   * @returns {Array} Les données de performance formatées.
+   */
   getPerformance(performance) {
     let d = [];
 

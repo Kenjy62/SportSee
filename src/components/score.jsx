@@ -26,12 +26,12 @@ export default function Score() {
   }
 
   return (
-    <div className="rounded-md relative w-full h-40 md:h-52 xl:h-80 flex flex-col bg-[#FBFBFB]">
-      <div className="ml-10 font-semibold text-xl absolute top-2 left-2">
+    <div className="relative flex h-40 w-full flex-col rounded-md bg-[#FBFBFB] md:h-52 xl:h-80">
+      <div className="absolute left-2 top-2 ml-1 font-semibold md:text-lg xl:text-xl">
         Score
       </div>
       {isLoading ? (
-        <div className="w-full h-[360px] bg-[#FBFBFB] rounded-md">
+        <div className="h-[360px] w-full rounded-md bg-[#FBFBFB]">
           <div className="shimmer"></div>
         </div>
       ) : (

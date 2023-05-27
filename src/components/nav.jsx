@@ -33,7 +33,7 @@ export default function Nav() {
   return screen.width >= 1024 ? (
     <div
       className={
-        "min-h-[calc(100vh-96px)] w-28 bg-black flex flex-col justify-around items-center"
+        "flex min-h-[calc(100vh-96px)] w-28 flex-col items-center justify-around bg-black"
       }
     >
       <div className="flex flex-col gap-3">
@@ -42,7 +42,7 @@ export default function Nav() {
         <img src={Icon3} />
         <img src={Icon4} />
       </div>
-      <div className="copyright text-white rotate-180">
+      <div className="copyright rotate-180 text-white">
         Copyright SportSee 2020
       </div>
     </div>
@@ -52,7 +52,7 @@ export default function Nav() {
         !open
           ? `hidden`
           : `flex` +
-            " min-h-[calc(100vh-96px)] w-28 bg-black flex flex-col justify-around items-center"
+            " flex min-h-[calc(100vh-96px)] w-28 flex-col items-center justify-around bg-black"
       }
     >
       <div className="flex flex-col gap-3">
@@ -61,7 +61,7 @@ export default function Nav() {
         <img src={Icon3} />
         <img src={Icon4} />
       </div>
-      <div className="copyright text-white rotate-180">
+      <div className="copyright rotate-180 text-white">
         Copyright SportSee 2020
       </div>
     </div>

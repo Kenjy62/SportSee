@@ -1,6 +1,13 @@
 import { useContext } from "react";
 import { UserContext } from "../context/user";
 
+/**
+ * Composant Card utilisé pour afficher une carte avec des informations spécifiques.
+ * @param {string} type - Le type de carte à afficher.
+ * @param {ReactNode} children - Les éléments enfants à afficher dans la carte.
+ * @returns {JSX.Element} Le composant Card.
+ */
+
 export default function Card({ type, children }) {
   const { isLoading } = useContext(UserContext);
 
@@ -22,7 +29,7 @@ export default function Card({ type, children }) {
 
   if (!isLoading) {
     return (
-      <div className="bg-[#FBFBFB] px-2 py-6 rounded-md flex flex-row gap-8 justify-center items-center shadow-sm">
+      <div className="flex flex-row items-center justify-center gap-8 rounded-md bg-[#FBFBFB] px-2 py-6 shadow-sm md:flex-[calc(100%/2)] lg:flex-[calc(100%/4)]">
         <div className={style}>
           <img
             src={require(`../assets/icons/${customStyle.icon}.png`)}
@@ -30,7 +37,7 @@ export default function Card({ type, children }) {
           />
         </div>
         <div className="flex flex-col">
-          <span className="font-bold text-xl">{children}</span>
+          <span className="text-xl font-bold">{children}</span>
           <span className="text-md text-gray-400">{customStyle.name}</span>
         </div>
       </div>

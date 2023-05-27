@@ -19,9 +19,9 @@ export default function Sessions() {
   const { data, isLoading, error } = useContext(UserContext);
 
   return (
-    <div className="bg-red-500 rounded-lg w-full p-2 h-40 md:h-52 xl:h-80 relative">
+    <div className="relative h-40 w-full rounded-lg bg-red-500 p-2 md:h-52 xl:h-80">
       {isLoading ? (
-        <div className="w-full h-full">
+        <div className="h-full w-full">
           <div className="shimmer"></div>
         </div>
       ) : (
