@@ -25,3 +25,32 @@ Create a Profil Page With Recharts
 > ReactJS for frontend
 >
 > Tailwindcss
+
+# How to install
+
+In terminal : 
+```bash
+git clone https://github.com/Kenjy62/SportSee
+```
+
+```bash
+cd SportSee/backend
+```
+
+```bash
+npm install
+```
+```bash
+node app
+```
+
+Back to /
+
+```bash
+npm install
+```
+```bash
+npm start
+```
+
+
